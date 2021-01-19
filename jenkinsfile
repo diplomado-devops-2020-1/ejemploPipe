@@ -10,7 +10,7 @@ pipeline {
 
         stage('test') {
             steps {
-                sh "/usr/local/opt/maven/bin/mvn compile"
+                bat './mvnw.cmd clean test -e'
             }
         }
 
