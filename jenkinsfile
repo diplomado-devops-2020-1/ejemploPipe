@@ -24,7 +24,7 @@ pipeline {
 		
 		stage('Newman') {
             steps {
-                bat 'newman run S4_M4.postman_collection.json'
+                newman 'run S4_M4.postman_collection.json'
             }
         }
     }
