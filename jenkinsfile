@@ -10,14 +10,14 @@ pipeline {
 
         stage('test') {
             steps {
-                bat './mvnw.cmd compile -e'
+                bat 'mvn compile -e'
             }
         }
 
         stage('test2') {
             steps {
-                sh '''
-                    /usr/local/opt/maven/bin/mvn test
+                bat '''
+                    mvn test
                 '''
             }
         }
